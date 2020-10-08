@@ -1,0 +1,79 @@
+Question-1. Difference between HTTP/1.1 vs HTTP/2
+Answer:
+		HTTP/1.1							HTTP/2
+	_________________________________________________________________________________________________________________________
+	1. HTTP/1.1 can send single requests for data			1. HTTP/2 can send multiple requests for data
+	   in parallel over a single TCP connection. 			   in parallel over a single TCP connection. 
+	2. HTTP/1.1 can't compress a large number of 			2. HTTP/2 compress a large number of redundant
+	   redundant header frames.					    header frames.
+	3. HTTP/1.1 used to process text commands to			3. HTTP/2 will use binary commands (in 1s and
+	   complete request-response cycles.				   0s) to execute the same tasks.
+	4. No task prioritization.					4. Task prioritization exists.
+	5. Server push is not done here.				5. Server push is done here.
+
+
+
+
+
+Question-2. HTTP version history
+Answer:	
+	1. HTTP/0.9:
+		a) Initial Version of HTTP which is a simple single line client-server, request-response protocol.
+		b) GET was the only method supported with no headers.
+		c) Hypertext was the only response type and the connection terminated immediately after the response.
+
+	2. HTTP/1.0:
+		a) Browser-friendly protocol which included headers.
+		b) The response extended its ability to transmit scripts, stylesheets and media.
+		c) GET, HEAD, POST are the methods supported.
+		d) The connection terminated immediately after the response.
+	
+	3. HTTP/1.1:
+		a) The connection was long-lived.
+		b) GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS are the methods supported.
+		c) Introduced critical performance optimizations, faster responses, great bandwidth.
+
+	4. HTTP/2.0:
+		a) Multiplexing of requests and responses.
+		b) Header compression and prioritization of requests.
+		c) Efficient mechanisms for data streaming.
+
+
+
+
+
+Question-3. List five differences between Browser JS(Console) vs NodeJS.
+Answer:
+		Browser JS(Console)						NodeJS
+	______________________________________________________________________________________________________________________
+	1. Node processes request object.				1. Browsers processes response objects.
+	2. In Node everything is a module,				2. Moduling is not mandatory in client side JavaScript,
+	   You must keep your code inside a module.		   	   i.e., in browsers.
+	3. Node doesn't have a predefined "window" object		3. Window is a predefined global object which has 
+	   because it doesn't have a window to draw anything.		   functions and attributes.
+	4. Location" object is related to a particular url,		4. Location is another predefined object in browsers,
+	   it is for page specific. So, node doesn't require 	 	   that has all the information about the url we have
+	   that.							   loaded. 
+	5. Node is headless.						5. Browsers are not headless.
+
+
+
+Question-4. Abstract working of JS Engine
+Answer:
+	1. The JavaScript code is sent to the parser.
+	2. V8 parses the source code and turns it into an Abstract Syntax Tree (AST).
+	3. The tree is interpreted and then the byte code is produced.
+	4. The profiler acts as a bridge between compiler and interpreter.
+	5. The compiler helps to create optimized byte code.
+
+
+
+
+
+Question-5. What happens when you type a URL in the address bar in the browser?
+Answer:
+	1. Once after the user enters the URL, DNS converts it to IP address  along with associated port number. This is called Forward Lookup.
+	2. The DNS then sends a HTTP request using GET method and looks for index.html page.
+	3. The HTTP request reaches web servers and then the servers replies with "HTTP request Content".
+	4. Meanwhile, the port numbers exchanges i.e., the earlier sender becomes recipient and recipient becomes sender.
+	5. The requested content reach our web browsers.
