@@ -1,0 +1,137 @@
+Question 1: How do you copy by value a composite data type?
+Answer:		Composite data types are Object, Array, function.
+		
+		a) Array:
+		let arr=[1,2,3];
+		let arr2=[];
+		for(let i=0;i<arr.length;i++)
+		{
+			let val=arr[i];
+			arr2[i].append(val);
+		}
+		
+		b) Object:
+		let first={"name":"Prashanth","age":22};
+		let second={};
+		for(let key in first)
+		{
+			second[key]=first[key];
+		}
+		second["name"]="Kumar";
+
+
+
+Question 2: why there is a difference in behavior for copying contents in primitive and non primitive type? 
+Answer:
+		-> When we try to copy contents of primitive datatypes, the copying is done by value but not by reference.
+		Eg:
+			let a=10;
+			let b=a;
+			a=20;
+			console.log(a);//20
+			console.log(b);//10
+		
+		-> When we try to copy contents of non-primitive datatypes, the copying is done by reference.
+		Eg:
+			let arr3=[1,2,3];
+			let arr4=arr3;
+			arr4[2]=10;
+			console.log(arr3);//[1,2,10];
+			console.log(arr4);//[1,2,10];
+
+
+Question:3 Use typeof in all the datatypes.
+		
+		type(1);//Number
+		type(1.1);//Number
+		type("1.1");//String
+		type(true);//Boolean
+		type(null);//Object
+		type(undefined);//undefined
+		type([]);//Object
+		type({});//Object
+
+
+Question 4: Write a blog about objects and its internal representation in Javascript?
+Answer:
+	Objects are the representation of real-world entities in any language representing things by defining its properties along with their values.
+	In Javascript, objects may be defined as an unordered collection of "Key:value" pairs.
+
+	Ways to create an object:
+	________________________________
+	a) Object literal:
+		object literal is a comma-separated list of name-value pairs wrapped in curly braces.
+		Eg:
+			var first={"name":"Prashanth","age":22};
+	
+	b) Object.create():
+		The method creates a new object, using an existing object as the prototype of the newly created object.
+		Eg:
+			var second=Object.create(first);
+			second.name="Sunil";
+			second.age=25;
+
+	c) Object constructor
+		This is used to create multiple objects of similar type. In this case, a constructor is created and multiple objects can be initialized using the new keyword using the constructor as a wrapper for the newly created objects.
+		Eg.
+			Construction function-
+			function student(name,age)	
+			{
+				this.name=name;
+				this.age=age;
+			}
+			Creating objects using constructor-
+			var s1=new student("kiran",20);
+			var s2=new student("ravi",19);
+	
+	d) Object.assign()
+		It is used to copy the values and properties from one or more source objects to a target object. It invokes getters and setters since it uses both [[Get]] on the source and [[Set]] on the target.
+		Eg:
+		var ob1={age:20};
+		var ob2={age:19};
+		var ob3=Object.assign(ob1,ob2);
+		console.log(ob3);//{age:20,age:19};
+
+	e) Object.fromEntries
+		This method transforms a list of key-value pairs into an object.
+		Eg.
+		var ex1=new person(["name":"ravi","age":30]);
+		var ex2=Object.fromEntries(person);
+		console.log(ex2);//{"name":"ravi","age":30}
+
+
+Question 5: Command Line Arguments I executed.
+Answer:
+	    	1) $echo $HOME  	- The HOME variable is an environment variable that displays the path of the home directory.
+	    	2) $ ls	   		- ls lists all files and directories in the working directory.
+	    	3) $mkdir hello		- used to create a directory.
+		4) $ nano one.txt	- nano is a command line text editor. It works just like a desktop text editor like TextEdit or Notepad, except that it is accessible from the command line and only accepts keyboard input.
+		5) $mv one.txt hello/	- used to move a file into a directory.
+		6) $ pwd		- pwd prints the name of the working directory.
+		7) $ rm one.txt		- rm deletes files. Here we remove the file one.txt from the file system. 
+		8) $ rm -r hello	- rm -r deletes a directory and all of its child directories.
+		9) $ sort two.txt	- sort takes a filename or standard input and orders each line alphabetically, printing it to standard output.
+		10) $ cd desktop/	- cd takes a directory name as an argument, and switches into that directory.
+		11) alias pd="pwd"	- The alias command allows you to create keyboard shortcuts, or aliases, for commonly used commands.
+		12) cd..		- used to move one folder up.
+		13) ren two.txt three.txt- Used to rename a file.
+		14) copy path1 path2 	- Copies a file into another.
+		15) del three.txt	- Deletes a file.
+
+
+Question 6: What is the difference between window, screen, and document in Javascript?
+Answer:
+	Window is the main JavaScript object root, the global object in a browser, also can be treated as the root of the document object model. You can access it as window.
+	window.screen or just screen is a small information object about physical screen dimensions.
+	window.document or just document is the main object of the potentially visible document object model/DOM.
+	Since window is the global object you can reference any properties of it with just the property name - so you do not have to write down window.
+
+
+
+
+
+
+			
+		
+		
+		
