@@ -13,8 +13,6 @@ Answer:
 
 
 
-
-
 Question-2. HTTP version history
 Answer:	
 	1. HTTP/0.9:
