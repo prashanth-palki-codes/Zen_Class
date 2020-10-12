@@ -18,13 +18,9 @@ var actual = {foo: 5, bar: 6}
 
 function assertObjectsEqual(actual, expected, testName)
 {
-    let r=0;
-    if(actual.foo===expected.foo)
-    {
-        if(actual.bar===expected.bar)
-        r=1;
-    }
-    if(r===1)
+    var a=JSON.stringify(actual);
+    var b=JSON.stringify(expected);
+    if(a===b)
     console.log("Passed");
     else
     console.log("FAILED");
