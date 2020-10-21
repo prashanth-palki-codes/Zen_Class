@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <script>
+            var container=document.createElement('div');
+            container.setAttribute('class','container mt-3');
+
+            var divTag1=document.createElement('div');
+            divTag1.classList.add('row');
+            var divTag1col=document.createElement('div');
+            divTag1col.classList.add('col-12');
+            divTag1col.setAttribute('style',"background:#585858;");
+            var resImg=document.createElement('img');
+            resImg.setAttribute('src','resumeman.jpg');
+            resImg.setAttribute('style','width:128px;height:128px;border:4px dotted #FF8000;margin-left:40%;border-radius: 50%;');
+            divTag1col.append(resImg);
+            divTag1.append(divTag1col);
+
+            var nameTag=document.createElement('div');
+            nameTag.classList.add('row');
+            var namecol1=document.createElement('p');
+            namecol1.classList.add('col-4');
+            var namecol2=document.createElement('p');
+            namecol2.classList.add('col-4');
+            namecol2.setAttribute('style',"background:#FFBF00; border-radius:15px;font-size:40px");
+            namecol2.innerHTML="<center><b>BRAIN DUDEY</b></center>";
+            nameTag.append(namecol1,namecol2);
+
+            var divTag2=document.createElement('div');
+            divTag2.classList.add('row');
+            var divTag2col=document.createElement('div');
+            divTag2col.classList.add('col-12');
+            divTag2col.setAttribute('style',"background:#585858;margin-top:-20px");
+            divTag2col.innerHTML="<b></b>";
+            divTag2.append(divTag2col);
+
+            var address=document.createElement('div');
+            address.classList.add('row');
+            var addcol=document.createElement('p');
+            addcol.classList.add('col-12');
+            addcol.innerHTML="<center>N. Damen Avenue, Chicago 99999|999-999-9999|hello@kickresume.com|www.kickresume.com</center>";
+            address.append(addcol);
+
+            var line=document.createElement('div');
+            line.classList.add('row');
+            var linecol=document.createElement('p');
+            linecol.classList.add('col-12');
+            linecol.setAttribute('style','border-style: hidden hidden groove hidden;');
+            line.append(linecol);
+
+            var dvide=document.createElement('div');
+            dvide.classList.add('row');
+
+
+            var leftside=document.createElement('div');
+            leftside.classList.add('col-6');
+            var profile=document.createElement('div');
+            profile.classList.add('row');
+            var proImg=document.createElement('img');
+            proImg.classList.add('col-3');
+            proImg.setAttribute('src','Profile.png');
+            proImg.setAttribute('style','border:4px dotted #FF8000;height:50px;width:5px;border-radius: 50%;');
+            var protext=document.createElement('b');
+            protext.classList.add('col-9');
+            protext.setAttribute('style','color:#6E6E6E;font-size:30px');
+            protext.innerText="Profile";
+            profile.append(proImg,protext);
+            leftside.append(profile);
+
+            var profile1=document.createElement('div');
+            profile1.classList.add('row');
+            var procont=document.createElement('p');
+            procont.classList.add('col-12');
+            procont.setAttribute('style','text-align:justify;');
+            procont.innerText="Innovative optimized solution seeker. Excited to be at the development phase of my new career as a web developer. I am ambitious, adventurous, assiduous, animated, and an Illiteration advocate.";
+            profile1.append(procont);
+            leftside.append(profile1);       
+
+            var skills=document.createElement('div');
+            skills.classList.add('row');
+            var skillsImg=document.createElement('img');
+            skillsImg.classList.add('col-3');
+            skillsImg.setAttribute('src','Skills.png');
+            skillsImg.setAttribute('style','border:4px dotted #FF8000;height:50px;width:5px;border-radius: 50%;');
+            var sktext=document.createElement('b');
+            sktext.classList.add('col-9');
+            sktext.setAttribute('style','color:#6E6E6E;font-size:30px');
+            sktext.innerText="Skills";
+            skills.append(skillsImg,sktext);
+            leftside.append(skills);
+
+            var techskills=document.createElement('div');
+            techskills.classList.add('row');
+            var tech=document.createElement('p');
+            tech.classList.add('col-12');
+            tech.innerHTML="<center><b>Technical Skills</b></center>";
+            techskills.append(tech);
+            leftside.append(techskills);
+            var techskills1=document.createElement('p');
+            techskills1.classList.add('row');
+            var tech1=document.createElement('div');
+            tech1.classList.add('col-6');
+            tech1.innerText="JavaScript";
+            var trange1=document.createElement('input');
+            trange1.classList.add('col-6');
+            trange1.setAttribute('type','range');
+            trange1.setAttribute('min','0');
+            trange1.setAttribute('max','10');
+            trange1.setAttribute('value','8');
+            techskills1.append(tech1,trange1);
+            leftside.append(techskills1);
+
+            var techskills2=document.createElement('p');
+            techskills2.classList.add('row');
+            var tech2=document.createElement('div');
+            tech2.classList.add('col-6');
+            tech2.innerText="CSS";
+            var trange2=document.createElement('input');
+            trange2.classList.add('col-6');
+            trange2.setAttribute('type','range');
+            trange2.setAttribute('min','0');
+            trange2.setAttribute('max','10');
+            trange2.setAttribute('value','8');
+            techskills2.append(tech2,trange2);
+            leftside.append(techskills2);
+
+            var techskills3=document.createElement('p');
+            techskills3.classList.add('row');
+            var tech3=document.createElement('div');
+            tech3.classList.add('col-6');
+            tech3.innerText="HTML";
+            var trange3=document.createElement('input');
+            trange3.classList.add('col-6');
+            trange3.setAttribute('type','range');
+            trange3.setAttribute('min','0');
+            trange3.setAttribute('max','10');
+            trange3.setAttribute('value','6');
+            techskills3.append(tech3,trange3);
+            leftside.append(techskills3);
+
+            var techskills4=document.createElement('p');
+            techskills4.classList.add('row');
+            var tech4=document.createElement('div');
+            tech4.classList.add('col-6');
+            tech4.innerText="React";
+            var trange4=document.createElement('input');
+            trange4.classList.add('col-6');
+            trange4.setAttribute('type','range');
+            trange4.setAttribute('min','0');
+            trange4.setAttribute('max','10');
+            trange4.setAttribute('value','6');
+            techskills4.append(tech4,trange4);
+            leftside.append(techskills4);
+
+            var techskills5=document.createElement('p');
+            techskills5.classList.add('row');
+            var tech5=document.createElement('div');
+            tech5.classList.add('col-6');
+            tech5.innerText="Redux";
+            var trange5=document.createElement('input');
+            trange5.classList.add('col-6');
+            trange5.setAttribute('type','range');
+            trange5.setAttribute('min','0');
+            trange5.setAttribute('max','10');
+            trange5.setAttribute('value','8');
+            techskills5.append(tech5,trange5);
+            leftside.append(techskills5);
+
+            var techskills6=document.createElement('p');
+            techskills6.classList.add('row');
+            var tech6=document.createElement('div');
+            tech6.classList.add('col-6');
+            tech6.innerText="Mongo";
+            var trange6=document.createElement('input');
+            trange6.classList.add('col-6');
+            trange6.setAttribute('type','range');
+            trange6.setAttribute('min','0');
+            trange6.setAttribute('max','10');
+            trange6.setAttribute('value','8');
+            techskills6.append(tech6,trange6);
+            leftside.append(techskills6);
+
+            var techskills7=document.createElement('p');
+            techskills7.classList.add('row');
+            var tech7=document.createElement('div');
+            tech7.classList.add('col-6');
+            tech7.innerText="Deployment";
+            var trange7=document.createElement('input');
+            trange7.classList.add('col-6');
+            trange7.setAttribute('type','range');
+            trange7.setAttribute('min','0');
+            trange7.setAttribute('max','10');
+            trange7.setAttribute('value','10');
+            techskills7.append(tech7,trange7);
+            leftside.append(techskills7);
+
+
+            var addskills=document.createElement('div');
+            addskills.classList.add('row');
+            var add=document.createElement('p');
+            add.classList.add('col-12');
+            add.innerHTML="<center><b>Additional Skills</b></center>";
+            addskills.append(add);
+            leftside.append(addskills);
+            var addskills1=document.createElement('p');
+            addskills1.classList.add('row');
+            var add1=document.createElement('div');
+            add1.classList.add('col-6');
+            add1.innerText="Project Management";
+            var arange1=document.createElement('input');
+            arange1.classList.add('col-6');
+            arange1.setAttribute('type','range');
+            arange1.setAttribute('min','0');
+            arange1.setAttribute('max','10');
+            arange1.setAttribute('value','10');
+            addskills1.append(add1,arange1);
+            leftside.append(addskills1);
+
+            var addskills2=document.createElement('p');
+            addskills2.classList.add('row');
+            var add2=document.createElement('div');
+            add2.classList.add('col-6');
+            add2.innerText="Recruitment";
+            var arange2=document.createElement('input');
+            arange2.classList.add('col-6');
+            arange2.setAttribute('type','range');
+            arange2.setAttribute('min','0');
+            arange2.setAttribute('max','10');
+            arange2.setAttribute('value','8');
+            addskills2.append(add2,arange2);
+            leftside.append(addskills2);
+
+            var addskills3=document.createElement('p');
+            addskills3.classList.add('row');
+            var add3=document.createElement('div');
+            add3.classList.add('col-6');
+            add3.innerText="Business Development";
+            var arange3=document.createElement('input');
+            arange3.classList.add('col-6');
+            arange3.setAttribute('type','range');
+            arange3.setAttribute('min','0');
+            arange3.setAttribute('max','10');
+            arange3.setAttribute('value','10');
+            addskills3.append(add3,arange3);
+            leftside.append(addskills3);
+
+            var addskills4=document.createElement('p');
+            addskills4.classList.add('row');
+            var add4=document.createElement('div');
+            add4.classList.add('col-6');
+            add4.innerText="Editing";
+            var arange4=document.createElement('input');
+            arange4.classList.add('col-6');
+            arange4.setAttribute('type','range');
+            arange4.setAttribute('min','0');
+            arange4.setAttribute('max','10');
+            arange4.setAttribute('value','8');
+            addskills4.append(add4,arange4);
+            leftside.append(addskills4);
+
+            var addskills1=document.createElement('p');
+            addskills1.classList.add('row');
+            var add1=document.createElement('div');
+            add1.classList.add('col-6');
+            add1.innerText="Fundrasing";
+            var arange1=document.createElement('input');
+            arange1.classList.add('col-6');
+            arange1.setAttribute('type','range');
+            arange1.setAttribute('min','0');
+            arange1.setAttribute('max','10');
+            arange1.setAttribute('value','10');
+            addskills1.append(add1,arange1);
+            leftside.append(addskills1);
+
+
+            var workexp=document.createElement('div');
+            workexp.classList.add('row');
+            var workexpImg=document.createElement('img');
+            workexpImg.classList.add('col-3');
+            workexpImg.setAttribute('src','Work.png');
+            workexpImg.setAttribute('style','border:4px dotted #FF8000;height:50px;width:5px;border-radius: 50%;');
+            var wetext=document.createElement('b');
+            wetext.classList.add('col-9');
+            wetext.setAttribute('style','color:#6E6E6E;font-size:30px');
+            wetext.innerText="Work Experience";
+            workexp.append(workexpImg,wetext);
+            leftside.append(workexp);
+
+            var workd=document.createElement('div');
+            workd.classList.add('row');
+            var workd1=document.createElement('b');
+            workd1.classList.add('col-4');
+            workd1.innerText="Event Manager";
+            var temp=document.createElement('b');
+            temp.classList.add('col-4');
+            var workd2=document.createElement('div');
+            workd2.classList.add('col-4');
+            workd2.innerText="03/2014 - 02/2017";
+            workd.append(workd1,temp,workd2);
+            leftside.append(workd);
+
+            var workd3=document.createElement('div');
+            workd3.classList.add('row');
+            var workd4=document.createElement('b');
+            workd4.classList.add('col-12');
+            workd4.innerText="C3 Presents, Washington DC";
+            workd3.append(workd4);
+            leftside.append(workd3);
+
+            var wecont=document.createElement('ul');
+            wecont.classList.add('row');
+            wecont.setAttribute('style','text-align:justify');
+            var l1=document.createElement('li');
+            l1.classList.add('col-12');
+            l1.innerText="Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation.";
+            var l2=document.createElement('li');
+            l2.classList.add('col-12');
+            l2.innerText="Brought new business to the organization through relentless networking and stewardship which helped the company win the bid for the State Department Summit on the Middle East and, the companies largest civic event to date, the United State of Women.";
+            var l3=document.createElement('li');
+            l3.classList.add('col-12');
+            l3.innerText="Exercise fiscal control over budget creation, tracking and reporting Collaborate with employees at all organizational levels to advance cohesive operations.";
+            wecont.append(l1,l2,l3);
+            leftside.append(wecont);
+
+
+
+
+            var mid=document.createElement('div');
+            mid.classList.add('col-1');
+            mid.setAttribute('style','border-left: 6px groove;');
+
+
+
+            var rightside=document.createElement('div');
+            rightside.classList.add('col-5');
+
+            var workexp2=document.createElement('div');
+            workexp2.classList.add('row');
+            var workexp2Img=document.createElement('img');
+            workexp2Img.classList.add('col-3');
+            workexp2Img.setAttribute('src','Work.png');
+            workexp2Img.setAttribute('style','border:4px dotted #FF8000;height:50px;width:20px;border-radius: 50%;');
+            var we2text=document.createElement('b');
+            we2text.classList.add('col-9');
+            we2text.setAttribute('style','color:#6E6E6E;font-size:30px');
+            we2text.innerText="Work Experience";
+            workexp2.append(workexp2Img,we2text);
+            rightside.append(workexp2);
+
+            var workdat=document.createElement('div');
+            workdat.classList.add('row');
+            var workdat1=document.createElement('b');
+            workdat1.classList.add('col-5');
+            workdat1.innerHTML="Community Relations<br>Manager";
+            var temp=document.createElement('b');
+            temp.classList.add('col-2');
+            var workdat2=document.createElement('div');
+            workdat2.classList.add('col-5');
+            workdat2.innerText="06/2011 - 01/2014";
+            workdat.append(workdat1,temp,workdat2);
+            rightside.append(workdat);
+
+            var workdat3=document.createElement('div');
+            workdat3.classList.add('row');
+            var workdat4=document.createElement('p');
+            workdat4.classList.add('col-12');
+            workdat4.innerText="Gay & Lesbian Elder Housing, Los Angeles";
+            workdat3.append(workdat4);
+            rightside.append(workdat3);
+
+            var we2cont=document.createElement('ul');
+            we2cont.classList.add('row');
+            we2cont.setAttribute('style','text-align:justify');
+            var l1=document.createElement('li');
+            l1.classList.add('col-12');
+            l1.innerText="Arranging presentation and pitch deck.";
+            var l2=document.createElement('li');
+            l2.classList.add('col-12');
+            l2.innerText="Designing a PR plan and establishing important focus points.";
+            var l3=document.createElement('li');
+            l3.classList.add('col-12');
+            l3.innerText="Designing, creating and managing content across multiple communication platforms.";
+            var l4=document.createElement('li');
+            l4.classList.add('col-12');
+            l4.innerText="Building relationships with key media players.";
+            we2cont.append(l1,l2,l3,l4);
+            rightside.append(we2cont);
+
+            var educate=document.createElement('div');
+            educate.classList.add('row');
+            var educateImg=document.createElement('img');
+            educateImg.classList.add('col-3');
+            educateImg.setAttribute('src','Education.png');
+            educateImg.setAttribute('style','border:4px dotted #FF8000;height:50px;width:20px;border-radius: 50%;margin-top:50px');
+            var edtext=document.createElement('b');
+            edtext.classList.add('col-9');
+            edtext.setAttribute('style','color:#6E6E6E;font-size:30px;margin-top:50px');
+            edtext.innerText="Education";
+            educate.append(educateImg,edtext);
+            rightside.append(educate);
+
+            var edat=document.createElement('div');
+            edat.classList.add('row');
+            var ed1=document.createElement('b');
+            ed1.classList.add('col-6');
+            ed1.innerHTML="Engineering Immersion<br>Program";
+            var temp=document.createElement('b');
+            temp.classList.add('col-1');
+            var ed2=document.createElement('div');
+            ed2.classList.add('col-5');
+            ed2.innerText="11/2018 - 06/2018";
+            edat.append(ed1,temp,ed2);
+            rightside.append(edat);
+
+            var ed3=document.createElement('div');
+            ed3.classList.add('row');
+            var ed4=document.createElement('p');
+            ed4.classList.add('col-12');
+            ed4.innerText="Thinkful, Chicago, IL";
+            ed3.append(ed4);
+            rightside.append(ed3);
+
+            var educate1=document.createElement('div');
+            educate1.classList.add('row');
+            var educont1=document.createElement('p');
+            educont1.classList.add('col-12');
+            educont1.setAttribute('style','text-align:justify;');
+            educont1.innerText="Project-focused intensive program with emphasis on Mongo, Express, React, and JavaScript (MERN) technical stack";
+            educate1.append(educont1);
+            rightside.append(educate1);
+
+            var educont2=document.createElement('ul');
+            educont2.classList.add('row');
+            educont2.setAttribute('style','text-align:justify');
+            var l1=document.createElement('li');
+            l1.classList.add('col-12');
+            l1.innerText="Developed a full-stac wen application, RenewU, using React that allows users to explore various aspects of meditation. Users's progress is stored on a backend created using Node and MongoDB.";
+            var l2=document.createElement('li');
+            l2.classList.add('col-12');
+            l2.innerText="Developed a language learning app, Foodie Phonetics: using spaced repetition and a linked list data structure. React was used to create the front end components while Node and Mongo were used to create a backend that stores user data.";
+            var l3=document.createElement('li');
+            l3.classList.add('col-12');
+            l3.innerText="Developed a concierge app, Pley, for individuals looking for curated suggestions when visiting a new place. React was used to develop the front end which includes real-time chat, drag and drop and variety of advanced features. The backend, built using Node, Express, and Mongo, takes advantage of well-developed RESTful API, Geospatial searching, and user authentication with JWT.";
+            educont2.append(l1,l2,l3);
+            rightside.append(educont2);
+
+            
+
+            container.append(divTag1);
+            container.append(nameTag);
+            container.append(divTag2);
+            container.append(address);
+            container.append(line);
+            dvide.append(leftside,mid,rightside);
+            container.append(dvide);
+            document.body.append(container);
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
