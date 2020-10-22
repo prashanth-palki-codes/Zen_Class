@@ -1,7 +1,7 @@
 var v=0;
 function dis(val)
 {
-    if(val>=0 && val<=9)
+    if(val>=0 && val<=9 || val==='(' || val===')')
     {
         document.getElementById("result").innerText+=val;
         document.getElementById("answer").innerText="";
@@ -52,6 +52,21 @@ function cancelOne()
     var resultantString=str.slice(0,len-1);
     document.getElementById("result").innerText=resultantString;
 }
+
+function keysPress()
+{
+    onkeydown=function(e){
+        var x=e.keyCode;
+        var y=e.key;
+        if(x>=42 && x<=57 || y==='/' || y==='*' || y==='-' || y==='+' || y==='.' || y==='(' || y===')')
+        dis(y);
+        if(x===13 || y==='=')
+        solve();
+        if(x===8)
+        cancelOne();
+    }
+}
+keysPress();
 
 
 var container=document.createElement('div');
