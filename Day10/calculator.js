@@ -60,10 +60,12 @@ function keysPress()
         var y=e.key;
         if(x>=42 && x<=57 || y==='/' || y==='*' || y==='-' || y==='+' || y==='.' || y==='(' || y===')')
         dis(y);
-        if(x===13 || y==='=')
+        else if(x===13 || y==='=')
         solve();
-        if(x===8)
+        else if(x===8)
         cancelOne();
+        else
+        window.alert("Please enter a valid character");
     }
 }
 keysPress();
