@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/3f90cd46c1.js" crossorigin="anonymous"></script>
+        <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }
+            
+            li {
+              float: left;
+            }
+            
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }            
+
+            label{
+                font-size: 25px;
+            }
+            #lab{
+                margin-top: 20px;
+            }
+            i{
+                margin-top: 20px;
+                float: left;
+                border: 1px solid black;
+                padding: 6px;
+            }
+            input{
+                width:300px;
+                height: 25px;
+                margin-top: 20px;
+            }
+            #submit{
+                width:auto;
+                margin-left: 45%;
+            }
+            #main{
+                padding: 30px;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                margin-left: 20%;
+                margin-right: 20%;
+                display: flex;
+                background-color:rgb(231, 233, 233);
+            }
+            #main div{
+                flex-basis: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#Q1-Form">Q1-Form</a></li>
+            <li><a href="Q2_Jumbotron.html">Q2_Jumbotron</a></li>
+            <li><a href="Q3_ProductsGridView.html">Q3_ProductsGridView</a></li>
+        </ul>
+
+        <div id="main">
+            <div id="labels">
+                <div id="lab"><label for="name">Full Name</label></div>
+                <div id="lab"><label for="address1">Address Line 1</label></div>
+                <div id="lab"><label for="address2">Address Line 2</label></div>
+                <div id="lab"><label for="city">City</label></div>
+                <div id="lab"><label for="state">State/Province/Region</label></div>
+                <div id="lab"><label for="zip">Postal Code/ZIP</label></div>
+                <div id="lab"><label for="country">Country</label></div>
+                <div id="lab"><label for="mail">Email</label></div>
+                <div id="lab"><label for="mbl">Phone Number</label></div>
+
+            </div>
+            <div id="inputs">
+                <div id="inp">
+                    <i class="fas fa-user-alt"></i>
+                    <input type="text" id="name" placeholder="Full Name">
+                </div>
+                <div id="inp">
+                    <i class="far fa-address-book"></i>
+                    <input type="text" id="address1" placeholder="Address Line 1">
+                </div>
+                <div id="inp">
+                    <i class="far fa-address-book"></i>
+                    <input type="text" id="address2" placeholder="Address Line 2">
+                </div>
+                <div id="inp">
+                    <i class="far fa-building"></i>
+                    <input type="text" id="city" placeholder="City">
+                </div>
+                <div id="inp">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="state" placeholder="State/Province/Region">
+                </div>
+                <div id="inp">
+                    <i class="fas fa-mail-bulk"></i>
+                    <input type="number" id="zip" placeholder="Postal Code/ZIP">
+                </div>
+                <div id="inp">
+                    <i class="fas fa-flag-checkered"></i>
+                    <input type="text" id="country" placeholder="Afghanistan">
+                </div>
+                <div id="inp">
+                    <i class="fas fa-user-alt"></i>
+                    <input type="email" id="mail" placeholder="Email">
+                </div>
+                <div id="inp">
+                    <i class="fas fa-user-alt"></i>
+                    <input type="tel" id="mbl" placeholder="Phone Number">
+                </div> 
+            </div>
+            
+        </div>
+        <br><br>
+        <input type="submit" id="submit" value="Submit">
+    </body>
+</html>
