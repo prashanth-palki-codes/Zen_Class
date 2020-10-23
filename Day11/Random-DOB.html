@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1> 8 digit Unique Random number generator and Date of birth calculator</h1>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <style>
+            h1{
+                color: lime;
+                text-align: center;
+            }
+            body{
+                background-color: ivory;
+            }
+            #dob{
+                margin-left: 20%;
+                border: 3px solid pink;
+                border-radius: 20px;
+            }
+            #row2{
+                margin-top: 50px;
+            }
+            #randomid{
+                border: 2px solid orchid;
+                border-radius: 30px;
+                padding: 10px;
+                color:red;
+                
+            }
+            #randomNumber{
+                text-align: center;
+                color:brown;
+                font-size: 20px;
+            }
+            
+            #dobid{
+                margin-left: 25%;
+                border: 2px solid gold;
+                border-radius: 30px;
+                padding: 10px;
+                color: indigo;
+            }
+            #calcDob{
+                margin-left: 25%;
+                color: blue;
+                font-size: 25px;
+                margin-top: 10%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            var max=99999999;
+            var min=10000000;
+            function getRandomNumber(min,max)
+            {
+
+                var rand=Math.floor(Math.random()*(max-min)+min);
+                var temp=rand.toString().split('');
+                var uniq=new Set(temp);
+                if(uniq.size!=temp.length)
+                {
+                    getRandomNumber(min,max);
+                }
+                else
+                    document.getElementById('randomNumber').innerText=rand;
+            }
+
+            function toFloor(val1,val2)
+            {
+                return Math.floor(val1/val2);
+            }
+
+            function year(val1,val2)
+            {
+                let d1=new Date(val1);
+                let d2=new Date(val2);
+                return d2.getFullYear()-d1.getFullYear();
+            }
+
+            function month(val1,val2)
+            {
+                let nYears=year(val1,val2);
+                let nMonths=nYears*12 + (val2.getMonth() - val1.getMonth());
+                return nMonths;
+            }
+
+
+            function getDob()
+            {
+                var inputDate=document.getElementById("dob").value;
+                if(Date.parse(inputDate))
+                {
+                    let givenDate=new Date(inputDate);
+                    let todayDate=new Date();
+
+                    let milliSeconds=parseInt(todayDate.getTime())-parseInt(givenDate.getTime());
+                    let seconds=toFloor(milliSeconds,1000);
+                    let minutes=toFloor(seconds,60);
+                    let hours=toFloor(minutes,60);
+                    let days=toFloor(hours,24);
+                    let months=month(givenDate,todayDate);
+                    let years=year(givenDate,todayDate);
+                    document.getElementById('calcDob').innerHTML='<b>The world is enjoying you since<br>'
+                        +years+' Years<br>'+months+' Months<br>'+days+' Days<br>'+hours+' Hours<br>'+minutes+' Minutes<br>'
+                        +seconds+' Seconds<br>'+milliSeconds+' Milli Seconds</b>';
+                }
+            }
+
+
+            var container=document.createElement('div');
+            container.setAttribute('class','container mt-5');
+
+            var row1=document.createElement('div');
+            row1.classList.add('row');
+            var textBox=document.createElement('div');
+            textBox.classList.add('col-4');
+            textBox.setAttribute('id','randomNumber');
+            textBox.setAttribute('style','border:5px solid black;border-radius:20px;padding:10px;height:50px;width:600px');
+
+            var d=document.createElement('input');
+            d.setAttribute('type','date');
+            d.setAttribute('id','dob');
+            d.classList.add('col-3');
+            row1.append(textBox,d);
+
+            var row2=document.createElement('div');
+            row2.classList.add('row');
+            row2.setAttribute('id','row2');
+            var randButton=document.createElement('input');
+            randButton.setAttribute('type','button');
+            randButton.id="randomid";
+            randButton.value="Click here for generating 8-digit unique random number";
+            randButton.addEventListener('click',function(){
+                getRandomNumber(min,max);
+            })
+
+            var dateButton=document.createElement('input');
+            dateButton.setAttribute('type','button');
+            dateButton.id="dobid";
+            dateButton.value='Submit Date';
+            dateButton.addEventListener('click',function(){
+                getDob();
+            })
+            row2.append(randButton,dateButton);
+
+            var row3=document.createElement('div');
+            row3.classList.add('row');
+            row3.setAttribute('id','calcDob');
+
+            container.append(row1,row2,row3);
+            document.body.append(container);
+        </script>
+    </body>
+</html>
