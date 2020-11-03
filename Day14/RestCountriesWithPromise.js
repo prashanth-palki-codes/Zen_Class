@@ -28,7 +28,6 @@ makeRequest("GET", "https://restcountries.eu/rest/v2/all")
       result.filter((x)=>{
         var div=document.getElementById('display');
         div.innerHTML+=`
-        <div class="card-deck">
             <div class="card" style="width: 20rem;">
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted">${x.name}</h6>
@@ -38,8 +37,7 @@ makeRequest("GET", "https://restcountries.eu/rest/v2/all")
                     <p class="card-text">Region: <b>${x.region}</b></p>
                     <p class="card-text">LatLong: <b>${x.latlng}</b></p>
                 </div>
-            </div>
-        </div>`;
+            </div>`;
       })
   })
 
