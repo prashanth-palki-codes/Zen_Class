@@ -18,7 +18,7 @@ async function requestNow(){
                     <p class="card-text">Country Code: <b>${x.alpha2Code},${x.alpha3Code}</b></p>
                     <p class="card-text">Region: <b>${x.region}</b></p>
                     <p class="card-text">LatLong: <b>${x.latlng}</b></p>
-                    <button type="button" class="btn btn-primary" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="top" data-content="${weatherData.main.temp} | pressure: ${weatherData.main.pressure} | Humidity:${weatherData.main.humidity}">
+                    <button type="button" class="btn btn-primary" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="top" data-content="Temperature: ${weatherData.main.temp} | pressure: ${weatherData.main.pressure} | Humidity:${weatherData.main.humidity}">
                         Click for weather
                     </button>
                 </div>
