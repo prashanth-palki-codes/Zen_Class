@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            background-image: linear-gradient(green,gold,cyan);
+        }
+        #username{
+            padding: 20px;
+            box-shadow: 5px 0px 10px 8px rgb(126, 237, 245);
+        }
+        #saveScoreBtn,#playAgain,#goHome{
+            background-color: rgb(212, 61, 61);
+            border: 1px solid pink;
+            border-radius: 15px;
+            padding: 20px;
+            color:white;
+            margin-top: 15px;
+            margin-left: 40px;
+        }
+        #displayScore{
+            font-size: 30px;
+            color:tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="displayScore"></p>
+        <input type="text" id="username" placeholder="username" autocomplete="off"><br>
+        <a href="highScores.html" target="_blank">
+            <input type="button" id="saveScoreBtn" value="Save" onclick="setUsername()"><br>
+        </a>
+        <a href="game.html">
+            <input type="button" id="playAgain" value="Play Again">
+        </a><br>
+        <a href="index.html">
+            <input type="button" id="goHome" value="Go Home">
+        </a>
+    </div>
+    <script>
+        var displayScore=document.getElementById('displayScore');
+        var value=localStorage.getItem('newscore');
+        displayScore.innerHTML=`<b>Congratulations</b><br>Your Score is: ${value}`;
+        function setUsername(){
+            var username=document.getElementById('username').value;
+            localStorage.setItem('username',username);        
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
