@@ -1,0 +1,107 @@
+//Question-1
+
+db.Students.insertMany([
+    {
+        name : "Yash",
+        address : 
+        [
+            {area:"123 abc Nagar",city:"Bangalore"}
+        ],
+        favTeacher : "Radhika",
+        age : 21
+    },
+    {
+        name : "Vijay",
+        address : 
+        [
+            {area:"3 kbc Nagar",city:"Bangalore"}
+        ],
+        favTeacher : "Sangeetha",
+        age : 22
+    },
+    {
+        name : "Surya",
+        address : 
+        [
+            {area:"123 abc Nagar",city:"Chennai"}
+        ],
+        favTeacher : "Jyothika",
+        age : 23
+    },
+    {
+        name : "Venky",
+        address : 
+        [
+            {area:"123 abc Nagar",city:"Hyderabad"}
+        ],
+        favTeacher : "Anitha",
+        age : 24
+    },
+    {
+        name : "Ashwini",
+        address : 
+        [
+            {area:"123 abc Nagar",city:"Chennai"}
+        ],
+        favTeacher : "Nazriya",
+        age : 20
+    },
+    {
+        name : "Ramya",
+        address : 
+        [
+            {area:"123 abc Nagar",city:"Vizag"}
+        ],
+        favTeacher : "Anitha",
+        age : 20
+    }  
+])
+
+
+//Q-2
+
+db.Students.find({name : "Arun"});
+
+
+//Q-3
+
+db.Students.update(
+  {name : "Vijay"},
+  {
+      name : "Vijay",
+      address : 
+      [
+          {area:"123 abc Nagar",city:"Chennai"}
+      ],
+      favTeacher : "Sangeetha",
+      age : 22
+  }
+)
+
+
+//Q-4
+
+db.Students.find(
+{
+    age : { $gt : 12 }
+})
+
+
+//Q-5
+
+db.Students.find({name : "Ashwini"},{favTeacher : 1,"_id" : 0}).pretty();
+
+
+//Q-6
+
+db.Students.count();
+
+
+//Q-7
+
+db.Students.count( { address : {city: { $eq : "Chennai"}}} );
+
+
+//Q-8
+
+db.Students.count({favTeacher : { $eq : "Anitha"}});
