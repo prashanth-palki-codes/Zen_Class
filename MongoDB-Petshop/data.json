@@ -1,0 +1,91 @@
+//Question-1
+    db.createCollection("petsAvailability");
+
+    db.petsAvailability.insert({
+     name:"Blue Pigeon",
+     type:"Pigeon",
+     cost:3500,
+     characterstics:"Flies very fast",
+     history:"Once flied at 70 Km/hr",
+     status:"Available",
+     count:12
+    });
+    db.petsAvailability.insert({
+         name:"Golden Fish",
+         type:"Fish",
+         cost:1000,
+         characterstics:"Looks beautiful",
+         history:"Mimics you all the time",
+         status:"Available",
+         count:10
+     });
+    db.petsAvailability.insert({
+             name:"Mongrel",
+             type:"Dog",
+             cost:35000,
+             characterstics:"Runs 30KM Non-stop",
+             history:"Won the fastest dog breed in Bangalore",
+             status:"Available",
+             count:3
+    });
+    db.petsAvailability.insert({
+                 name:"Snoopy",
+                 type:"Cat",
+                 cost:5000,
+                 characterstics:"Good campanion",
+                 history:"Returns to the owner within no-time",
+                 status:"Available",
+                 count:4
+    });
+
+
+
+
+
+//Question-2
+db.createCollection("petRequests")
+db.petRequests.insert({
+    name : "Charlie",
+    pets : ["Fish"]
+});
+
+db.petRequests.insert({
+    name : "Yash",
+    pets : ["dog","Pigeon"]
+});
+db.petRequests.insert({
+    name : "Vijay",
+    pets : ["Dog","Cat"]
+});
+
+
+
+
+//Question-3
+db.petRequests.aggregate([
+    {
+        $lookup:{
+            from:"petsAvailability",
+            localField:"pets",
+            foreignField:"type",
+            as:"requestAnswers"
+        },
+    }
+])
+
+
+//Question-4
+db.petsAvailability.find({type:"Fish"}).count();
+db.petsAvailability.find({type:"Dog"}).count();
+db.petsAvailability.find({type:"Cat"}).count();
+
+
+//Question-5
+db.petRequests.aggregate([
+    {$lookup:{
+        from:"petsAvailability",
+        localField:"pets",
+        foreignField:"type",
+        as:"results"
+    }}
+])
