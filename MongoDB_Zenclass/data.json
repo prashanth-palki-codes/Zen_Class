@@ -99,7 +99,7 @@ db.Students.count();
 
 //Q-7
 
-db.Students.count( { address : {city: { $eq : "Chennai"}}} );
+db.Students.find({address:{$elemMatch:{city:"Chennai"}}}).count();
 
 
 //Q-8
